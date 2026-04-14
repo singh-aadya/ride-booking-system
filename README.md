@@ -202,6 +202,4 @@ java -cp out main.Main
 
 See `sample-output.txt` for a full walkthrough of a session.
 
----
 
-*Built as a learning project to demonstrate Java fundamentals, OOP, and data structures.*
