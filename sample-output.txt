@@ -1,0 +1,138 @@
+===========================================================
+  RIDEBOOK CONSOLE APP — SAMPLE OUTPUT
+===========================================================
+
+  Loading sample data...
+  ✔ 3 users and 5 drivers loaded.
+
+  ╔══════════════════════════════════════════╗
+  ║        🚗  RIDEBOOK CONSOLE APP  🚗      ║
+  ║     Uber/Ola-Style Ride Booking System   ║
+  ╚══════════════════════════════════════════╝
+
+  ┌─────────────────────────────────────────┐
+  │              MAIN MENU                  │
+  ├─────────────────────────────────────────┤
+  │  1. Add New User                        │
+  │  2. Add New Driver                      │
+  │  3. Book a Ride                         │
+  │  4. View Ride History (by User ID)      │
+  │  5. Show Available Drivers              │
+  │  6. Show All Drivers                    │
+  │  7. Show All Users                      │
+  │  8. Show All Rides                      │
+  │  9. Toggle Driver Availability          │
+  │  0. Exit                                │
+  └─────────────────────────────────────────┘
+  Enter your choice: 5
+
+  Available Drivers:
+  -----------------------------------------
+  D001     Raj Kumar       Rating: 4.8  Location: (2.0, 3.0)
+  D002     Priya Mehta     Rating: 4.5  Location: (5.0, 1.0)
+  D003     Suresh Nair     Rating: 4.9  Location: (1.0, 6.0)
+  D004     Deepa Sharma    Rating: 4.2  Location: (7.0, 4.0)
+  D005     Arjun Patel     Rating: 4.7  Location: (3.0, 3.5)
+
+-----------------------------------------------------------
+  USER BOOKS A RIDE
+-----------------------------------------------------------
+
+  Enter your choice: 3
+
+  ── Book a Ride ─────────────────────────────
+
+  Registered Users:
+  -----------------------------------------
+  User[ID=U001, Name=Alice Johnson]
+  User[ID=U002, Name=Bob Smith]
+  User[ID=U003, Name=Carol White]
+
+  Enter User ID (e.g. U001): U001
+  Enter pickup location (x y) — e.g. '4.0 5.0': 4.0 4.0
+  Enter drop location   (x y) — e.g. '9.0 2.0': 10.0 10.0
+
+  ──────────────────────────────────────────
+   Searching for best driver...
+  ──────────────────────────────────────────
+
+  [Driver selection logic running via Java Streams API]
+  Distances from pickup (4.0, 4.0):
+    - Arjun Patel   (3.0, 3.5) → distance = 1.12 ⭐ CLOSEST
+    - Raj Kumar     (2.0, 3.0) → distance = 2.24
+    - Suresh Nair   (1.0, 6.0) → distance = 3.61
+    - Priya Mehta   (5.0, 1.0) → distance = 3.16
+    - Deepa Sharma  (7.0, 4.0) → distance = 3.00
+
+  → Best driver: Arjun Patel (closest, rated 4.7)
+
+  ✔ Driver is now OFFLINE.
+
+  ✔ Ride Successfully Booked!
+  ─────────────────────────────────────────
+  Driver Assigned : Arjun Patel (ID: D005)
+  Driver Rating   : 4.7 ⭐
+  Driver Distance : 1.12 units from pickup
+  Pickup Location : (4.0, 4.0)
+  Drop Location   : (10.0, 10.0)
+  Ride ID         : R001
+
+  Simulate ride completion? (y/n): y
+
+  ✔ Ride R001 completed.
+  Driver Arjun Patel is now available again.
+
+-----------------------------------------------------------
+  VIEW RIDE HISTORY
+-----------------------------------------------------------
+
+  Enter your choice: 4
+
+  Registered Users:
+  -----------------------------------------
+  User[ID=U001, Name=Alice Johnson]
+  ...
+
+  Enter User ID to view history (e.g. U001): U001
+
+  ═══════════════════════════════════════════
+   Ride History for: Alice Johnson
+  ═══════════════════════════════════════════
+
+  ┌─────────────────────────────────────────┐
+  │  Ride ID  : R001
+  │  Passenger: Alice Johnson
+  │  Driver   : Arjun Patel
+  │  Pickup   : (4.0, 4.0)
+  │  Drop     : (10.0, 10.0)
+  │  Booked At: 14-04-2025 10:35:22
+  └─────────────────────────────────────────┘
+
+-----------------------------------------------------------
+  ADD NEW USER
+-----------------------------------------------------------
+
+  Enter your choice: 1
+
+  Enter user's full name: David Fernandez
+  ✔ User registered: User[ID=U004, Name=David Fernandez]
+
+-----------------------------------------------------------
+  TOGGLE DRIVER AVAILABILITY
+-----------------------------------------------------------
+
+  Enter your choice: 9
+
+  Enter Driver ID (e.g. D001): D002
+  Set to (1) Available / (2) Unavailable: 2
+  ✔ Priya Mehta is now OFFLINE.
+
+-----------------------------------------------------------
+  EXIT
+-----------------------------------------------------------
+
+  Enter your choice: 0
+
+  👋 Thank you for using RideBook. Goodbye!
+
+===========================================================
